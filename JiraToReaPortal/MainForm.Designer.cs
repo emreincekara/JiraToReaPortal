@@ -72,7 +72,6 @@
             // lblGithub
             // 
             lblGithub.ActiveLinkColor = Color.SlateGray;
-            lblGithub.AutoSize = true;
             lblGithub.LinkArea = new LinkArea(7, 14);
             lblGithub.LinkBehavior = LinkBehavior.NeverUnderline;
             lblGithub.LinkColor = Color.Black;
@@ -412,8 +411,8 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(1036, 388);
             Controls.Add(grbWorklog);
             Controls.Add(grbRea);
@@ -433,7 +432,6 @@
             grbWorklog.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgWorklog).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

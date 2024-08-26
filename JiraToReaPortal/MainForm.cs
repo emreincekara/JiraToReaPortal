@@ -445,7 +445,11 @@ namespace JiraToReaPortal
                                 var status = timeSheetCreateResult?.status ?? 1;
 
                                 if (status != 0)
+                                {
                                     MessageBox.Show($"Failed to process worklog for Task: {worklog.Task} on {worklog.StartDate}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    btnImport.Text = originalButtonText;
+                                    return;
+                                }
                             }
                             else if (timeSheetCreateResponse.StatusCode == HttpStatusCode.Unauthorized)
                             {
@@ -455,12 +459,15 @@ namespace JiraToReaPortal
                                 lblReaUsername.Enabled = txtReaUsername.Enabled = lblReaPassword.Enabled = txtReaPassword.Enabled = chkReaRememberMe.Enabled = true;
                                 btnReaLogin.Text = "Login";
 
-                                break;
+                                btnImport.Text = originalButtonText;
+                                return;
                             }
                         }
 
                         btnImport.Text = originalButtonText;
                         UpdateImportButtonState();
+
+                        MessageBox.Show("Worklogs have been successfully processed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
