@@ -76,10 +76,12 @@
             lblGithub.LinkArea = new LinkArea(7, 14);
             lblGithub.LinkBehavior = LinkBehavior.NeverUnderline;
             lblGithub.LinkColor = Color.Black;
-            lblGithub.Location = new Point(791, 367);
+            lblGithub.Location = new Point(784, 367);
             lblGithub.Name = "lblGithub";
-            lblGithub.Size = new Size(0, 18);
+            lblGithub.Size = new Size(241, 21);
             lblGithub.TabIndex = 0;
+            lblGithub.TabStop = true;
+            lblGithub.Text = "© 2024 @emreincekara. All rights reserved.";
             lblGithub.UseCompatibleTextRendering = true;
             lblGithub.VisitedLinkColor = Color.Black;
             lblGithub.LinkClicked += lblGithub_LinkClicked;

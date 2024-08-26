@@ -610,7 +610,7 @@ namespace JiraToReaPortal
                 var worklogDetail = new WorklogDetail
                 {
                     AccountId = accountId,
-                    Comment = worklogJson["comment"].ToString().Trim(),
+                    Comment = (worklogJson["comment"]?.ToString().Trim()) ?? "",
                     Started = started.ToString("yyyy-MM-dd"),
                     Ended = started.AddSeconds(timeSpentSeconds).ToString("yyyy-MM-dd"),
                     TimeSpent = worklogJson["timeSpent"].ToString(),
