@@ -9,7 +9,7 @@ namespace JiraToReaPortal
     public partial class MainForm : Form
     {
         private static readonly string jiraBaseUrl = "https://borusanotomotiv.atlassian.net/rest/api/2";
-        private static readonly string reaBaseUrl = "https://portalapi.reateknoloji.com/api";
+        private static readonly string reaBaseUrl = "https://portalapi.reatech.uk/api";
 
         private static string reaToken = string.Empty;
         private static string jiraAccountId = string.Empty;
